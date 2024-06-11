@@ -22,27 +22,22 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void addUser(User user) {
-
         entityManager.persist(user);
     }
 
     @Override
     @SuppressWarnings("unchecked")
     public List<User> listUsers() {
-
-        return entityManager.createQuery(" FROM User").getResultList();
-
+        return entityManager.createQuery("FROM User").getResultList();
     }
 
     @Override
     public User getUser(Long id) {
-
         return entityManager.find(User.class, id);
     }
 
     @Override
     public void editUser(Long id, User user) {
-
         User edit = entityManager.find(User.class, id);
         edit.setUsername(user.getUsername());
         edit.setFirstname(user.getFirstname());
@@ -54,15 +49,13 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void deleteUser(Long id) {
-
         entityManager.remove(entityManager.find(User.class, id));
     }
 
     @Override
-    public List<User> findByUsername(String username) {
-
-        return entityManager.createQuery("select u from User u join fetch u.roles where u.username =:username").setParameter("username", username).getResultList();
+    public User findByUsername(String username) {
+        return entityManager.createQuery("select u from User u join fetch u.roles where u.username =:username", User.class)
+                .setParameter("username", username)
+                .getSingleResult();
     }
 }
-
-
