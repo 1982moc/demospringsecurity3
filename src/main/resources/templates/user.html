@@ -29,7 +29,7 @@
         <th>Email</th>
         <th>Role</th>
     </tr>
-    <tr th:each="user : ${users}">
+    <tr th:each="user : ${user}">
         <td th:text="${user.getUsername()}">UserName</td>
         <td th:text="${user.getFirstname()}">First Name</td>
         <td th:text="${user.getSecondName()}">Second Name</td>

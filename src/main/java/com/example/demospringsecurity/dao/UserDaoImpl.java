@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 
-//import ru.kata.spring.boot_security.demo.models.User;
+
 
 import java.util.List;
 
@@ -52,10 +52,11 @@ public class UserDaoImpl implements UserDao {
         entityManager.remove(entityManager.find(User.class, id));
     }
 
+
     @Override
-    public User findByUsername(String username) {
-        return entityManager.createQuery("select u from User u join fetch u.roles where u.username =:username", User.class)
+    public List<User> findByUsername(String username) {
+        return entityManager.createQuery("SELECT u FROM User u JOIN FETCH u.roles WHERE u.username = :username", User.class)
                 .setParameter("username", username)
-                .getSingleResult();
+                .getResultList();
     }
 }
