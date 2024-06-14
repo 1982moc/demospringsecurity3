@@ -1,4 +1,4 @@
-package com.example.demospringsecurity.service.security;
+package com.example.demospringsecurity.security;
 
 import com.example.demospringsecurity.models.User;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,6 +1,5 @@
 package com.example.demospringsecurity.service;
 
-import com.example.demospringsecurity.dao.RoleService;
 import com.example.demospringsecurity.dao.UserDao;
 import com.example.demospringsecurity.models.User;
 import org.springframework.beans.factory.annotation.Autowired;

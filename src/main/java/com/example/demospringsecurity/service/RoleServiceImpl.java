@@ -1,6 +1,8 @@
-package com.example.demospringsecurity.dao;
+package com.example.demospringsecurity.service;
 
+import com.example.demospringsecurity.dao.RoleDao;
 import com.example.demospringsecurity.models.Role;
+import com.example.demospringsecurity.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

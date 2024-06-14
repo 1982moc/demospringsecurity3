@@ -1,4 +1,4 @@
-package com.example.demospringsecurity.dao;
+package com.example.demospringsecurity.service;
 
 import com.example.demospringsecurity.models.Role;
 

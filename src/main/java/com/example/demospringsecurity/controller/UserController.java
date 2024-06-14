@@ -3,7 +3,7 @@ package com.example.demospringsecurity.controller;
 import com.example.demospringsecurity.models.User;
 
 import com.example.demospringsecurity.service.UserService;
-import com.example.demospringsecurity.service.security.AccountDetails;
+import com.example.demospringsecurity.security.AccountDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
